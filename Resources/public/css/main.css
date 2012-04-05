@@ -1,0 +1,344 @@
+/* 
+    Document   : main
+    Created on : 19-nov-2011, 18:07:02
+    Author     : victor
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+body{
+    /*background-image: url('../images/concrete_wall_3.png') !important;*/
+}
+
+
+#header, #page, #footer{
+
+}
+
+#page{
+    margin-top: 12px;
+
+}
+
+/*.wrapper{
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+}*/
+
+/* === header === */
+
+#header{
+    background: none repeat scroll 0 0 #2D2D2D;
+    color: #CCCCCC;
+    height: 40px;
+}
+#header2{    
+    background: none repeat scroll 0 0 #F5F5F5;
+    border-bottom: 1px solid #DDDDDD;
+    height: 60px;
+    padding: 5px 0 10px;
+    margin-bottom: 10px;
+}
+
+
+.container-logo{
+    position: relative;
+}
+#logo{
+    font-family: 'Righteous', cursive;
+    font-size: 35px;
+    display: block;
+    float: left;
+    margin-top: 20px;
+    text-decoration: none;
+
+}
+#logo span{
+}
+#baseline {
+    color: #999999;
+    font-family: verdana;
+    font-size: 9px;
+    left: 85px;
+    position: absolute;
+    top: 41px;
+}
+
+#search-box {
+    margin-top: 20px;
+}
+#search-box button{
+    float: right !important;
+}
+
+/* === menu === */
+
+
+
+/* === page === */
+#page{
+}
+
+
+/* === footer === */
+#footer{
+}
+
+/* === icons ===*/
+
+.vote_positive, .vote_negative{
+    width: 24px;
+    height: 24px;
+    display: inline-block; 
+    cursor: pointer;
+}
+.vote_positive{ background-image: url('../images/vote-positive.png'); }
+.vote_negative{ background-image: url('../images/vote-negative.png'); }
+
+.voted{
+    opacity:0.5;
+    cursor: auto;
+}
+
+
+.icon_magnifier{
+    width: 16px;
+    height: 16px;
+    display: inline-block;     
+}
+.tags{
+  padding-left: 20px;
+  background-repeat: no-repeat;
+}
+.icon_magnifier{ background-image: url('../images/magnifier.png'); }
+.tags{ background-image: url('../images/tags.png'); }
+
+
+.container_watch_player{
+    
+}
+
+.container_watch_player object{
+    border-radius: 5px;
+}
+
+.quote{
+    background-image: url("../images/quote.png");
+    opacity: 0.1;
+}
+/* Search header */
+#search-header{
+    
+}
+
+.pagerfanta{
+    clear: both;
+}
+/* List of Videos */
+ul.videos{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.video-list-item{
+    /*border-radius:3px;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);*/
+    border-bottom: 1px dotted #DFDFDF;
+    margin-bottom: 13px;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+.video-list-item:hover{
+    background-color: #FFFFFF;
+}
+
+.thumbnail{
+    float: left;
+    margin-right: -5px;
+}
+
+.result-item-content{
+    
+}
+
+.total_votes{
+    background: none repeat scroll 0 0 #0069D6;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px 0 #BBBBBB;
+    color: #FFFFFF;
+    margin: auto auto 6px;
+    text-align: center;
+    display: block;
+}
+.total_visits{
+    text-align: center;
+    font-size: 11px;
+    display: block;
+    margin-top: 15px;
+}
+
+.do_you_like strong{
+    margin: 12px 5px;
+    float: left;
+}
+.do_you_like div{
+    margin-top: 7px;
+    float: left;
+}
+
+/*
+.published{
+    color: #969696;
+    display: block;
+    font-size: 12px;
+}
+*/
+.related-videos-index{
+    overflow-y: auto;
+    height: 345px;
+}
+
+/* Bootstrap */
+blockquote small:before{content:'';}
+h2{line-height: 25px}
+
+
+/* items */
+.video-list-item-horizontal{
+    /*border-bottom: 1px dotted #DFDFDF;*/
+    margin-bottom: 13px;
+    padding-bottom: 10px;
+}
+.video-list-item-horizontal .detail{
+    float: left;
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+    line-height: 15px;
+}
+
+.video-list-item-horizontal .detail .title{
+    text-align: center;
+}
+
+time{
+    color: #888888;
+    font-size: 11px;
+    font-style: normal;
+}
+
+
+
+.video-list-item-vertical{
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.video-list-item-vertical .thumbnail > img{
+    max-height: 70px;
+}
+.video-list-item-vertical .detail{
+    float: left;
+    font-size: 11px;
+    margin-left: 15px;
+    line-height: 12px;
+    width: 165px;
+    
+}
+.video-list-item-vertical .detail h5{
+    line-height: 12px;
+    margin-bottom: 5px;
+}
+
+.video-list-item-vertical .detail .title{
+    text-align: center;
+}
+
+
+/* Comments */
+
+
+.comment-list-item{
+    border: 1px solid #CACACA;
+    margin: 10px 0;
+}
+.comment-list-item .header{
+    background: url("../images/metabar.gif") repeat-x scroll 0 0 transparent;
+    border-bottom: 1px solid #CCCCCC;
+    height: 19px;
+    padding: 7px 10px;
+}
+.comment-list-item .header .date{
+    float: right;
+}
+.comment-list-item .body{
+    background: none repeat scroll 0 0 #FBFBFB;
+    color: #333333;
+    font-size: 12px;
+    padding: 10px;
+    position: relative;
+}
+
+.comment-form-container {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 3px 3px 3px 3px;
+    padding: 3px;
+}
+.comment-form-container .header{
+    border-bottom: 1px solid #CCCCCC;
+    margin-left: -3px;
+    min-height: 19px;
+    padding: 7px 10px;    
+}
+.comment-form-container .body{
+    border-bottom: 1px solid #CCCCCC;
+    margin-left: -3px;
+    min-height: 19px;
+    padding: 7px 10px;
+    overflow: hidden;
+}
+
+.comment-form-container textarea{
+    width: 99%;
+}
+
+.comment-form-actions{
+    margin-top: 10px;
+    text-align: right;
+}
+
+.comment-login{
+    padding-top: 15px;
+    display: block;
+    width: 50px;
+    float: left;
+}
+
+.comment-keyword-or{
+    
+    position: absolute;
+    top: 23px;
+    left: 56px;
+    width: 12px;
+    height: 21px;
+    background: #EEEEEE;
+}
+
+.title-videos{
+    background-color: #0088CC;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    margin: 20px 10px;
+    padding: 0 5px;    
+}

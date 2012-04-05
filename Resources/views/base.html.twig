@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />                      
+        <title>{% block title %}TwitterBootstrapBundle{% endblock %}</title>
+        
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/iukanettwitterbootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" media="all"/>
+            <link href="{{ asset('bundles/iukanettwitterbootstrap/css/main.css') }}" rel="stylesheet" type="text/css" media="all" />
+            <link href="{{ asset('bundles/iukanettwitterbootstrap/css/ui-lightness/jquery-ui-1.8.17.custom.css') }}" rel="stylesheet" type="text/css" media="all"/>
+            
+            <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'/>
+        {% endblock %}
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />        
+    </head>
+    
+    <body>   
+        {# === header === #}
+        <div id="header">
+          <div class="wrapper">
+            {% block header %}{% endblock %}
+          </div>
+        </div>
+            
+        {# === header === #}
+        <div id="header2">
+          <div class="container">
+               <div class="span12 container-logo">
+                    <a id="logo">
+				            {% block header2 %}
+                               TwitterBootstrapBundle
+			                 {% endblock %}
+                    </a>                            
+                </div>      
+          </div>
+        </div>            
+      
+        {# === page === #}
+        <div class="container">            
+            {% block page %}{% endblock %}
+        </div>
+        
+        {# === footer === #}
+        <div class="footer">
+          <div class="container">
+            {% block footer %}
+                  <hr/>
+                  <p class="pull-right"><a href="https://www.iukanet.com" target="_blank">Desarrollado por IUKANET</a></p>
+                  © Todos los derechos reservados.
+            {% endblock %}
+          </div>
+        </div>
+            
+        
+        {% block javascripts %}            
+            
+            
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="{{ asset('bundles/prefcursos/js/jquery-1.7.1.min.js')}}"><\/script>')</script>
+            <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js"></script>
+            <script>window.jQuery || document.write('<script src="{{ asset('bundles/prefcursos/js/jquery-ui-1.8.17.costum.min.js')}}"><\/script>')</script>
+            <script src="{{ asset('bundles/iukanettwitterbootstrap/js/bootstrap.min.js') }}"></script>
+            
+            <script src="{{ asset('bundles/iukanettwitterbootstrap/js/jquery-ui-1.8.16.custom.min') }}"></script>
+            <script src="{{ asset('bundles/iukanettwitterbootstrap/js/jquery-ui-timepicker-addon.js') }}"></script>
+            <script src="{{ asset('bundles/iukanettwitterbootstrap/js/jquery-ui-datepicker-es.js') }}"></script>
+              
+        {% endblock %}
+    </body>
+</html>

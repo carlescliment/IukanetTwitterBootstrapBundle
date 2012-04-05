@@ -1,0 +1,77 @@
+{% extends 'IukanetTwitterBootstrapBundle::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+{% endblock %}
+
+{% block header %}
+      <div class="navbar">
+        <div class="container">          
+                
+                    <a href="{{ path('index') }}" class="brand">PREF</a>
+                
+                    <ul class="nav">
+                        <li><a href="">Clientes</a></li>
+                        <li><a href="">Tipos de cliente</a></li>
+                    </ul>
+                    <ul class="nav pull-right">                    
+                    	<li class="dropdown">                            
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Usuario<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href=""><i class="icon-user"></i> Perfil</a></li>
+                                <li class="divider"></li>
+                                <li><a href=""><i class="icon-off"></i> Salir</a></li>
+                            </ul>
+                        </li> 
+                    </ul>
+        </div>
+      </div>        
+{% endblock %}
+
+{% block header2 %}
+    {{ parent() }}    
+{% endblock %}
+
+{% block page %}
+    <div class="row">
+        <div class="span12">
+            {% for key, message in app.session.getFlashes() %}
+                <div class="alert alert-{{ key }}">
+                    {{ message|trans({}, 'FOSUserBundle') }}
+                </div>
+            {% endfor %}
+            {% block content %}{% endblock %}
+        </div>
+        {#
+            <div class="span3">
+                {% block slider %}
+
+                {% endblock %}
+            </div>
+        #}
+    </div>    
+{% endblock %}
+
+
+{% block footer %}
+  {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(function() {
+            $().dropdown();
+            $('.my-tooltip').tooltip();
+        })
+    </script>
+    <script>            
+        $(document).ready(function(){  
+            $('.datepicker').datetimepicker({            
+                hourGrid: 4,
+                minuteGrid: 10,
+                dateFormat: 'dd/mm/yy'
+            });            
+        });
+    </script>
+{% endblock %}
